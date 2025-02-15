@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newss",
+  "info": {
+    "singularName": "news",
+    "pluralName": "newss",
+    "displayName": "News",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.media",
+        "shared.rich-text"
+      ]
+    },
+    "Cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}
