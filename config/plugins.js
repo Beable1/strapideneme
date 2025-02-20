@@ -17,4 +17,22 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: 'nodemailer',
+      providerOptions: {
+        host: env('SMTP_HOST', 'smtp.gmail.com'),
+        port: env.int('SMTP_PORT', 587),
+        secure: false, // 465 için true, diğer portlar için false
+        auth: {
+          user: env('SMTP_USER'),
+          pass: env('SMTP_PASS'),
+        },
+      },
+      settings: {
+        defaultFrom: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),
+        defaultReplyTo: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),
+      },
+    },
+  },
 });
