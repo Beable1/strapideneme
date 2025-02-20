@@ -31,7 +31,7 @@ module.exports = ({ env }) => ({
       },
       settings: {
         defaultFrom: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),
-        defaultReplyTo: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),
+        defaultReplyTo: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),   
       },
     },
   },
