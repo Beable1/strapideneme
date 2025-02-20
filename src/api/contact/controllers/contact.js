@@ -6,7 +6,7 @@ module.exports = {
 
     try {
       await strapi.plugin('email').service('email').send({
-        to: 'bilgi@akademibogazici.com', 
+        to: 'bogaziciakademimailer@gmail.com', 
         subject: 'Yeni Teklif Talebi',
         text: `İsim: ${name}\nE-posta: ${email}\nTelefon: ${mobile}\nHizmet: ${service}\nMesaj: ${message}`,
       });
