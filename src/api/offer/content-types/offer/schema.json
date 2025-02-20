@@ -4,31 +4,26 @@
   "info": {
     "singularName": "offer",
     "pluralName": "offers",
-    "displayName": "Offer",
-    "description": "your offers"
+    "displayName": "Offer"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string"
     },
-    "email": {
-      "type": "string",
-      "maxLength": 80
-    },
-    "phone": {
+    "mobile": {
       "type": "string"
-      
+    },
+    "email": {
+      "type": "email"
     },
     "service": {
       "type": "string"
-      
-    }, "message": {
+    },
+    "message": {
       "type": "text"
-      
     }
   }
 }
