@@ -19,11 +19,11 @@ module.exports = ({ env }) => ({
   },
   email: {
     config: {
-      provider: 'nodemailer', 
+      provider: '@strapi/provider-email-nodemailer',
       providerOptions: {
         host: env('SMTP_HOST', 'smtp.gmail.com'),
         port: env.int('SMTP_PORT', 587),
-        secure: false, // 465 için true, diğer portlar için false
+        secure: false, // TLS için false, SSL için true (465)
         auth: {
           user: env('SMTP_USER'),
           pass: env('SMTP_PASS'),
@@ -31,7 +31,7 @@ module.exports = ({ env }) => ({
       },
       settings: {
         defaultFrom: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),
-        defaultReplyTo: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),   
+        defaultReplyTo: env('DEFAULT_EMAIL_FROM', 'bogaziciakademimailer@gmail.com'),
       },
     },
   },
